@@ -91,11 +91,6 @@ app.get('/pet/:id/save', AuthMiddleware, UsersController.savePet);
 app.get('/pet/:id/unsave', AuthMiddleware, UsersController.unSavePet);
 app.delete('/pet/:id/delete', AuthMiddleware, UsersController.deletePet);
 app.put('/pet/:id/caregiver', AuthMiddleware, UsersController.caregiverStatus);
-app.post(
-	'/user/:id/change-status',
-	AuthMiddleware,
-	UsersController.changeStatus
-);
 app.get('/user/owner-pets', AuthMiddleware, UsersController.getOwnerPetsList);
 
 app.get('/auth', authenticate);

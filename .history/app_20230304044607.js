@@ -91,8 +91,8 @@ app.get('/pet/:id/save', AuthMiddleware, UsersController.savePet);
 app.get('/pet/:id/unsave', AuthMiddleware, UsersController.unSavePet);
 app.delete('/pet/:id/delete', AuthMiddleware, UsersController.deletePet);
 app.put('/pet/:id/caregiver', AuthMiddleware, UsersController.caregiverStatus);
-app.post(
-	'/user/:id/change-status',
+app.get(
+	'/user/change-status/:id',
 	AuthMiddleware,
 	UsersController.changeStatus
 );
